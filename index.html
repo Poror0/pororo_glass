@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pororo - Современные стеклянные конструкции</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="/" class="logo">
+                <img src="img/logo.png" alt="Pororo Logo" width="128" height="73" style="flex-shrink: 0; aspect-ratio: 128.12/73;">
+                <span>Pororo</span>
+            </a>
+        </div>
+
+        <div class="nav-links">
+            <a href="#advantages">Почему выбирают нас</a>
+            <a href="#our-works">Наши работы</a>
+            <a href="#contact">Оставить заявку</a>
+            <a href="#map-section">Где мы</a>
+        </div>
+
+        <a href="/cart" class="cart-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="#advantages">Почему выбирают нас</a>
+        <a href="#our-works">Наши работы</a>
+        <a href="#contact">Оставить заявку</a>
+        <a href="#map-section">Где мы</a>  
+    </div>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Современные стеклянные конструкции под ваш проект</h1>
+            <p>Проектирование, производство и установка стеклянных перегородок, витрин, душевых, козырьков и других решений.</p>
+            <a href="#details" class="btn-primary">Подробнее</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="img/dizainerskii-dom-sovremennaa-villa-s-gostinoi-otkrytoi-planirovki-i-otdel-noi-spal-nei-bol-saa-terrasa-s-uedineniem 1.png" alt="Современное здание со стеклянными конструкциями и бассейном">
+        </div>
+    </section>
+
+    <section id="details" class="details-section">
+        <div class="container">
+            <div class="details-content">
+                <h2 class="details-title">Индивидуальные решения для вашего пространства</h2>
+                <p class="details-description">Мы создаем уникальные стеклянные конструкции, которые идеально вписываются в ваш интерьер и соответствуют всем вашим требованиям. Наши специалисты помогут подобрать оптимальное решение для любого помещения.</p>
+                <ul class="details-features">
+                    <li>Высококачественные материалы</li>
+                    <li>Точные замеры и проектирование</li>
+                    <li>Профессиональный монтаж</li>
+                    <li>Индивидуальный подход к каждому клиенту</li>
+                </ul>
+            </div>
+            <div class="details-image">
+                <img src="img/glass-construction.png" alt="Стеклянная конструкция в современном интерьере">
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <img src="img/ассортимент.png" alt="Широкий ассортимент">
+                    </div>
+                    <h3>Широкий ассортимент</h3>
+                    <p>Решения для любых задач и помещений</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <img src="img/доставка.png" alt="Быстрая доставка">
+                    </div>
+                    <h3>Быстрая доставка</h3>
+                    <p>По Санкт-Петербургу — 2-3 часа;<br>По России — 2-4 дня</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <img src="img/спецпредложения.png" alt="Специальное предложение">
+                    </div>
+                    <h3>Специальное предложение</h3>
+                    <p>Только для клиентов<br>нашего сайта</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <img src="img/гарантия.png" alt="Гарантия производителя">
+                    </div>
+                    <h3>Гарантия производителя</h3>
+                    <p>Гарантия 2 года</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <img src="img/оплата.png" alt="Безопасная оплата">
+                    </div>
+                    <h3>Безопасная оплата</h3>
+                    <p>Оплата после получения товара</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <img src="img/консультация.png" alt="Бесплатная консультация">
+                    </div>
+                    <h3>Бесплатная консультация</h3>
+                    <p>В любом удобном для вас<br>формате, 7 дней в неделю</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-works" id="our-works">
+        <div class="container">
+            <h2 class="section-title">Наши работы</h2>
+        </div>
+
+        <div class="works-gallery">
+            <div class="work-item">
+                <a href="#contact" class="work-link">
+                    <div class="work-image">
+                        <img src="img/стекланныеперегородки.png" alt="Стеклянные перегородки">
+                        <div class="work-overlay">
+                            <h3>СТЕКЛЯННЫЕ ПЕРЕГОРОДКИ</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="work-item">
+                <a href="#contact" class="work-link">
+                    <div class="work-image">
+                        <img src="img/душевыекабинки.png" alt="Душевые кабины">
+                        <div class="work-overlay">
+                            <h3>ДУШЕВЫЕ КАБИНЫ</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="work-item">
+                <a href="#contact" class="work-link">
+                    <div class="work-image">
+                        <img src="img/козырькиинавесы.png" alt="Козырьки и навесы">
+                        <div class="work-overlay">
+                            <h3>ЛЕСТНИЧНЫЕ ОГРАЖДЕНИЯ</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="work-item">
+                <a href="#contact" class="work-link">
+                    <div class="work-image">
+                        <img src="img/козырькиинавесы1.png" alt="Козырьки и навесы">
+                        <div class="work-overlay">
+                            <h3>КОЗЫРЬКИ И НАВЕСЫ</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="consultation-button-container">
+            <a href="#contact" class="consultation-button">Получить консультацию</a>
+        </div>
+    </section>
+
+    <!-- Секция с калькулятором -->
+    <section id="calculator" class="calculator-section">
+      <div class="container">
+        <h2 class="section-title">Рассчитать стоимость</h2>
+        
+        <div class="calculator-container">
+          <div class="calculator-description">
+            <h3>Калькулятор стоимости стеклянных конструкций</h3>
+            <p>Получите предварительный расчет стоимости вашего проекта. Выберите тип конструкции, укажите размеры и дополнительные параметры.</p>
+            <p>Обратите внимание, что итоговая стоимость может отличаться в зависимости от сложности проекта и дополнительных требований.</p>
+            <div class="calculator-image">
+              <img src="img/i.webp" alt="Стеклянная конструкция" onerror="this.src='/placeholder.svg?height=200&width=300'">
+            </div>
+          </div>
+          
+          <div class="calculator-form">
+            <form id="costCalculator">
+              <div class="calculator-group">
+                <label for="productType">Тип конструкции</label>
+                <select id="productType" name="productType" required>
+                  <option value="" disabled selected>Выберите тип конструкции</option>
+                  <option value="partition">Стеклянная перегородка</option>
+                  <option value="shower">Душевая кабина</option>
+                  <option value="door">Стеклянная дверь</option>
+                  <option value="railing">Ограждение из стекла</option>
+                  <option value="canopy">Козырек или навес</option>
+                </select>
+              </div>
+              
+              <div class="calculator-group">
+                <label for="glassType">Тип стекла</label>
+                <select id="glassType" name="glassType" required>
+                  <option value="" disabled selected>Выберите тип стекла</option>
+                  <option value="transparent">Прозрачное</option>
+                  <option value="matte">Матовое</option>
+                  <option value="tinted">Тонированное</option>
+                  <option value="tempered">Закаленное</option>
+                  <option value="laminated">Ламинированное</option>
+                </select>
+              </div>
+              
+              <div class="calculator-group">
+                <label for="width">Ширина (см)</label>
+                <input type="number" id="width" name="width" min="10" max="500" placeholder="Например, 100" required>
+              </div>
+              
+              <div class="calculator-group">
+                <label for="height">Высота (см)</label>
+                <input type="number" id="height" name="height" min="10" max="300" placeholder="Например, 200" required>
+              </div>
+              
+              <div class="calculator-group">
+                <label for="thickness">Толщина стекла (мм)</label>
+                <select id="thickness" name="thickness" required>
+                  <option value="" disabled selected>Выберите толщину</option>
+                  <option value="6">6 мм</option>
+                  <option value="8">8 мм</option>
+                  <option value="10">10 мм</option>
+                  <option value="12">12 мм</option>
+                </select>
+              </div>
+              
+              <div class="calculator-group checkbox-group">
+                <label>Дополнительные опции</label>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="installation" name="installation">
+                  <label for="installation">Монтаж</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="delivery" name="delivery">
+                  <label for="delivery">Доставка</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="hardware" name="hardware">
+                  <label for="hardware">Фурнитура</label>
+                </div>
+              </div>
+              
+              <button type="button" id="calculateButton" class="calculate-button">Рассчитать стоимость</button>
+            </form>
+            
+            <div id="calculationResult" class="calculation-result">
+              <div class="result-header">
+                <h3>Предварительная стоимость</h3>
+              </div>
+              <div class="result-content">
+                <p>Выберите параметры и нажмите "Рассчитать стоимость"</p>
+                <div id="resultDetails" class="result-details" style="display: none;">
+                  <div class="result-row">
+                    <span>Стоимость материалов:</span>
+                    <span id="materialsCost">0 ₽</span>
+                  </div>
+                  <div class="result-row">
+                    <span>Дополнительные опции:</span>
+                    <span id="optionsCost">0 ₽</span>
+                  </div>
+                  <div class="result-row total">
+                    <span>Итоговая стоимость:</span>
+                    <span id="totalCost">0 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="result-footer">
+                <p>Для получения точного расчета, пожалуйста, <a href="#contact">оставьте заявку</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Оставить заявку</h2>
+            <div class="form-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product">Интересующая продукция</label>
+                        <select id="product" name="product" required>
+                            <option value="" disabled selected>Выберите продукцию</option>
+                            <option value="partitions">Стеклянные перегородки</option>
+                            <option value="shower">Душевые кабины</option>
+                            <option value="showcases">Витрины и стенды</option>
+                            <option value="doors">Стеклянные двери</option>
+                            <option value="canopies">Козырьки и навесы</option>
+                            <option value="stairs">Лестничные ограждения</option>
+                            <option value="kitchen">Кухонные фартуки</option>
+                            <option value="shelves">Полки и столешницы</option>
+                            <option value="mirrors">Зеркала</option>
+                            <option value="greenhouse">Теплицы и фасады</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Сообщение (опционально)</label>
+                        <textarea id="message" name="message" placeholder="Опишите ваш проект или задайте вопрос"></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label for="agreement"><input type="checkbox" id="agreement" name="agreement" required> Я согласен с <a href="#" class="terms-link">условиями обработки персональных данных</a></label>д
+                        <span class="error-message" id="agreementError"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-button" id="submitButton" disabled>Оставить заявку</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Модальное окно успешной отправки -->
+        <div class="modal" id="successModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="success-icon">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" stroke="#35ABC5" stroke-width="4"/>
+                        <path d="M20 32L28 40L44 24" stroke="#35ABC5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Заявка успешно отправлена!</h3>
+                <p>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей.</p>
+                <button class="modal-button" id="closeModalButton">Закрыть</button>
+            </div>
+        </div>
+        
+        <!-- Затемнение фона при открытии модального окна -->
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <!-- Модальное окно условий обработки данных -->
+        <div class="modal" id="termsModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Условия обработки персональных данных</h3>
+                <div class="terms-content">
+                    <p>1. Согласие пользователя на обработку данных.</p>
+                    <p>2. Цели сбора и обработки данных (например, обработка заказов, улучшение сервиса).</p>
+                    <p>3. Перечень собираемых данных (например, имя, email, телефон).</p>
+                    <p>4. Срок хранения данных.</p>
+                    <p>5. Меры по защите данных.</p>
+                    <p>6. Права пользователя в отношении своих данных.</p>
+                    <p>7. Контактная информация для запросов.</p>
+                    <p>Мы серьезно относимся к конфиденциальности ваших данных и принимаем все необходимые меры для их защиты.</p>
+                </div>
+                <button class="modal-button" id="closeTermsModalButton">Закрыть</button>
+            </div>
+        </div>
+
+        <!-- Модальное окно настройки cookie -->
+        <div class="modal" id="cookieModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Настройка файлов Cookie</h3>
+                <div class="cookie-content">
+                    <p>Заходя на сайт, вы соглашаетесь с использованием файлов cookie.</p>
+                </div>
+                <button class="modal-button" id="closeCookieModalButton">Закрыть</button>
+            </div>
+        </div>
+
+        <!-- Модальное окно ввода номера заявки -->
+        <div class="modal" id="applicationNumberModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Введите номер заявки из СМС</h3>
+                <div class="application-number-input-container">
+                    <input type="text" id="applicationNumberInput" placeholder="Номер заявки">
+                    <button class="modal-button" id="submitApplicationNumber">Проверить</button>
+                </div>
+                <p id="applicationNumberError" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Модальное окно деталей заявки -->
+        <div class="modal" id="applicationDetailsModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Информация по заявке</h3>
+                <div class="application-details-content">
+                    <p><strong>Товар:</strong> <span id="detailProduct"></span></p>
+                    <p><strong>Дата оформления заявки:</strong> <span id="detailDate"></span></p>
+                    <p><strong>Адрес:</strong> <span id="detailAddress"></span></p>
+                    <p><strong>Статус:</strong> <span id="detailStatus"></span></p>
+                    <!-- Add other details as needed -->
+                </div>
+                <button class="modal-button" id="closeDetailsModalButton">Закрыть</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="reviews-header">
+                <div class="reviews-title-container">
+                    <h2 class="section-title">Отзывы <span class="reviews-count">152</span></h2>
+                    <div class="overall-rating">
+                        <span class="rating-number">5</span><span class="rating-max">/5</span>
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="write-review-btn">Написать отзыв</button>
+            </div>
+
+            <div class="reviews-list">
+                <!-- Отзыв 1 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author-info">
+                            <h3 class="review-author">Ольга</h3>
+                            <div class="review-stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                        <div class="review-meta">
+                            <div class="review-title">Офисные перегородки — идеальны!</div>
+                            <div class="review-date">27/05/2025</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Сделали все очень быстро. Стекло чистое, фурнитура качественная. Коллектив посоветовал, точно сказали что нам нужно.</p>
+                        <div class="review-images">
+                            <img src="img/78987634890.png" alt="Офисные перегородки" class="review-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author-info">
+                            <h3 class="review-author">Татьяна</h3>
+                            <div class="review-stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                        <div class="review-meta">
+                            <div class="review-title">Работа с дизайнерами — на уровне</div>
+                            <div class="review-date">22/05/2025</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Спасибо за отличную работу! Ребята справились с нестандартным проектом, все встало по местам как надо. Рекомендую!</p>
+                    </div>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author-info">
+                            <h3 class="review-author">Виктор</h3>
+                            <div class="review-stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                        <div class="review-meta">
+                            <div class="review-title">Витрины для магазина</div>
+                            <div class="review-date">21/05/2025</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Установили стеклянные витрины быстро, аккуратно, без лишних вопросов. Уже привлекли больше клиентов.</p>
+                        <div class="review-images">
+                            <img src="img/DSC_9927f.jpg" alt="Витрины для магазина" class="review-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Модальное окно для написания отзыва -->
+            <div class="review-modal" id="reviewModal">
+                <div class="review-modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3>Написать отзыв</h3>
+                    <form id="reviewForm" class="review-form">
+                        <div class="form-group">
+                            <label for="reviewName">Ваше имя</label>
+                            <input type="text" id="reviewName" name="reviewName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Ваша оценка</label>
+                            <div class="rating-select">
+                                <div class="rating-stars">
+                                    <span class="rating-star" data-value="1">★</span>
+                                    <span class="rating-star" data-value="2">★</span>
+                                    <span class="rating-star" data-value="3">★</span>
+                                    <span class="rating-star" data-value="4">★</span>
+                                    <span class="rating-star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="reviewRating" name="reviewRating" value="5">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewTitle">Заголовок отзыва</label>
+                            <input type="text" id="reviewTitle" name="reviewTitle" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewText">Текст отзыва</label>
+                            <textarea id="reviewText" name="reviewText" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewImage">Добавить фото (опционально)</label>
+                            <input type="file" id="reviewImage" name="reviewImage" accept="image/*">
+                        </div>
+                        
+                        <button type="submit" class="submit-review-btn">Отправить отзыв</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-overlay" id="reviewModalOverlay"></div>
+        </div>
+    </section>
+
+    <!-- Image Modal Structure -->
+    <div class="image-modal" id="imageModal">
+        <div class="image-modal-content">
+            <span class="close-image-modal">&times;</span>
+            <img src="" alt="Enlarged review image" class="enlarged-review-image">
+        </div>
+    </div>
+    <div class="modal-overlay" id="imageModalOverlay"></div>
+
+    <section id="map-section" class="map-section">
+        <div class="container">
+            <h2 class="section-title">Как добраться до нас</h2>
+            
+            <div class="map-container">
+                <div class="map-info">
+                    <div class="map-label">
+                        <span>Схема проезда на карте</span>
+                    </div>
+                    <div class="address-info">
+                        <h3>Наш адрес:</h3>
+                        <p>г. Санкт-Петербург, ул. Примерная, д. 123</p>
+                        <p>Телефон: +7 (812) 123-45-67</p>
+                        <p>Время работы: Пн-Пт с 9:00 до 18:00</p>
+                    </div>
+                </div>
+                
+                <div class="yandex-map" id="yandex-map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af075ebf2cb7d24f977597ee654395d1fe42bd0b1450e48bfe762522b97d15a8b&amp;width=747&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Pororo Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Pororo</span>
+                </div>
+                
+                <div class="footer-contact">
+                    <a href="tel:+79528125252" class="footer-phone">+ 7 (952) 812-52-52</a>
+                </div>
+                
+                <div class="footer-support">
+                    <p class="footer-support-text">Напишите нам и мы вам поможем</p>
+                    <a href="#contact" class="footer-support-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-support-icon">
+                            <path d="M20 16.5C20 17.3284 19.3284 18 18.5 18H9.5C8.67157 18 8 17.3284 8 16.5V9.5C8 8.67157 8.67157 8 9.5 8H18.5C19.3284 8 20 8.67157 20 9.5V16.5Z" stroke="#35ABC5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 8V6.5C16 5.67157 15.3284 5 14.5 5H5.5C4.67157 5 4 5.67157 4 6.5V13.5C4 14.3284 4.67157 15 5.5 15H8" stroke="#35ABC5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Служба заботы<br>о клиентах</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <a href="#" class="footer-nav-link">Главная</a>
+                        <a href="#details" class="footer-nav-link">О нас</a>
+                        <a href="#" class="footer-nav-link">Pororo</a>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <a href="#contact" class="footer-nav-link">Контакты</a>
+                        <a href="#" class="footer-nav-link terms-link">Условия обработки персональных данных</a>
+                        <a href="#" class="footer-nav-link cookie-settings-link">Настройка cookie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2025 Pororo. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
