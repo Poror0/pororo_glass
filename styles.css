@@ -42,6 +42,12 @@ a {
     gap: 18px;
 }
 
+.logo img {
+    max-width: 128px; /* Set maximum width */
+    height: auto;
+    flex-shrink: 0;
+}
+
 .logo span {
     width: 179px;
     height: 38px;
@@ -82,10 +88,9 @@ a {
 }
 
 .cart-icon {
-    padding: 8px;
+    padding: 0 8px;
     display: flex;
     align-items: center;
-    margin-top: 2px;
 }
 
 .cart-icon svg {
@@ -99,6 +104,7 @@ a {
     gap: 6px;
     cursor: pointer;
     z-index: 101; /* Ensure it's above other elements */
+    align-items: center;
 }
 
 .mobile-menu-btn span {
@@ -116,7 +122,7 @@ a {
     background-color: #111111;
     padding: 16px;
     position: absolute;
-    top: 104px;
+    top: 20px; 
     left: 0;
     right: 0;
     z-index: 100;
@@ -214,11 +220,23 @@ a {
         display: none;
     }
     
+    .navbar {
+        padding: 10px 20px; /* Reduced padding for mobile */
+    }
+
     .mobile-menu-btn {
         display: flex;
-        margin-top: 16px;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 101; /* Ensure it's above other elements */
+        align-items: center;
     }
     
+    .mobile-menu {
+        top: calc(10px + 10px + 26px); /* Calculated based on 10px top/bottom padding + 26px estimated content height */
+    }
+
     .hero {
         grid-template-columns: 1fr;
     }
@@ -245,7 +263,7 @@ a {
     }
     
     .cart-icon {
-        margin-top: 0;
+        padding: 0 8px;
     }
     
     .cart-icon svg {
@@ -269,24 +287,369 @@ a {
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px; /* Further reduce padding for very small screens */
+    }
+
+    .logo img {
+        width: clamp(70px, 18vw, 100px); /* Fluid width between 70px and 100px based on viewport width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo span {
+        font-size: 24px; /* Slightly reduce logo font size */
+    }
+
+    .cart-icon svg {
+        width: 24px; /* Slightly reduce cart icon size */
+        height: 24px;
+    }
+
     .hero-content {
-        padding: 24px 15px;
+        padding: 20px 15px; /* Adjusted padding */
     }
-    
+
     .hero h1 {
-        font-size: 28px;
+        font-size: 24px; /* Adjusted font size */
     }
-    
+
     .hero p {
-        font-size: 16px;
+        font-size: 15px; /* Adjusted font size */
     }
-    
+
     .btn-primary {
-        padding: 10px 24px;
-        font-size: 16px;
+        padding: 10px 20px; /* Adjusted padding */
+        font-size: 15px; /* Adjusted font size */
+    }
+
+    .details-section {
+        padding: 30px 0; /* Adjusted padding */
+    }
+
+    .details-section .container {
+        padding: 0 15px; /* Adjusted container padding */
+    }
+
+    .details-title {
+        font-size: 22px; /* Adjusted font size */
+    }
+
+    .details-description,
+    .details-features li {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .advantages {
+        padding: 30px 0; /* Adjusted padding */
+    }
+
+    .advantages .container {
+        padding: 0 15px; /* Adjusted container padding */
+    }
+
+    .advantages .section-title {
+        font-size: 26px; /* Adjusted font size */
+        margin-bottom: 20px; /* Adjusted margin */
+    }
+
+    .advantage-card {
+        padding: 15px; /* Adjusted padding */
+    }
+
+    .advantage-icon {
+        width: 50px; /* Adjusted icon size */
+        height: 50px;
+        margin-bottom: 10px; /* Adjusted margin */
+    }
+
+    .advantage-card h3 {
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    .advantage-card p {
+        font-size: 13px; /* Adjusted font size */
+    }
+
+    .our-works {
+        padding: 30px 0; /* Adjusted padding */
+    }
+
+    .our-works .section-title {
+        font-size: 26px; /* Adjusted font size */
+        margin-bottom: 20px; /* Adjusted margin */
+    }
+
+    .works-gallery {
+        gap: 5px; /* Adjusted gap */
+    }
+
+    .work-item {
+        height: 250px; /* Adjusted height */
+    }
+
+    .work-overlay h3 {
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    .consultation-button-container {
+        margin-top: 30px; /* Adjusted margin */
+    }
+
+    .consultation-button {
+        padding: 12px 25px; /* Adjusted padding */
+        font-size: 15px; /* Adjusted font size */
+    }
+
+    .contact-form-section {
+        padding: 30px 0; /* Adjusted padding */
+    }
+
+    .contact-form-section .section-title {
+        font-size: 26px; /* Adjusted font size */
+        margin-bottom: 20px; /* Adjusted margin */
+    }
+
+    .form-container {
+        padding: 20px 15px; /* Adjusted padding */
+    }
+
+    .form-group label {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .checkbox-group label {
+        font-size: 13px; /* Adjusted font size */
+    }
+
+    .submit-button {
+        font-size: 15px; /* Adjusted font size */
+        padding: 12px; /* Adjusted padding */
+    }
+
+    .modal-content {
+        padding: 20px 15px; /* Adjusted padding */
+    }
+
+    .modal-content h3 {
+        font-size: 20px; /* Adjusted font size */
+    }
+
+    .modal-content p {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .modal-button {
+        font-size: 15px; /* Adjusted font size */
+        padding: 10px 20px; /* Adjusted padding */
+    }
+
+    .reviews-section {
+        padding: 30px 0; /* Adjusted padding */
+    }
+
+    .reviews-section .container {
+        padding: 0 15px; /* Adjusted container padding */
+    }
+
+    .reviews-section .section-title {
+        font-size: 26px; /* Adjusted font size */
+        margin-bottom: 20px; /* Adjusted margin */
+    }
+
+    .reviews-title-container {
+        flex-direction: column; /* Stack title and rating */
+        align-items: flex-start; /* Align to the left */
+        gap: 5px; /* Reduced gap */
+    }
+
+    .overall-rating {
+        flex-direction: row; /* Keep rating elements in a row */
+        align-items: center; /* Vertically center rating elements */
+        gap: 5px; /* Reduced gap */
+    }
+
+    .rating-number {
+        font-size: 20px; /* Adjusted font size */
+    }
+
+    .rating-max {
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    .stars .star,
+    .review-stars .star {
+        font-size: 18px; /* Adjusted star size */
+    }
+
+    .write-review-btn {
+        padding: 8px 15px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .review-item {
+        padding-bottom: 20px; /* Adjusted padding */
+        margin-bottom: 20px; /* Adjusted margin */
+    }
+
+    .review-author-info {
+        flex-direction: column; /* Stack author and stars */
+        align-items: flex-start; /* Align to the left */
+        gap: 5px; /* Reduced gap */
+    }
+
+    .review-title {
+        font-size: 15px; /* Adjusted font size */
+    }
+
+    .review-date {
+        font-size: 12px; /* Adjusted font size */
+    }
+
+    .review-content p {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .review-image {
+        width: 150px; /* Adjusted image width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .show-more-container {
+        margin-top: 20px; /* Adjusted margin */
+    }
+
+    .show-more-btn {
+        padding: 8px 15px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .review-modal-content h3 {
+        font-size: 20px; /* Adjusted font size */
+        margin-bottom: 15px; /* Adjusted margin */
+    }
+
+    .review-form .form-group label {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .review-form input[type="text"],
+    .review-form textarea {
+        padding: 10px 12px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .rating-star {
+        font-size: 20px; /* Adjusted star size */
+    }
+
+    .submit-review-btn {
+        font-size: 15px; /* Adjusted font size */
+        padding: 12px; /* Adjusted padding */
+    }
+
+    .image-modal-content {
+        padding: 15px; /* Adjusted padding */
+    }
+
+    .map-section {
+        padding: 30px 0; /* Adjusted padding */
+    }
+
+    .map-section .container {
+        padding: 0 15px; /* Adjusted container padding */
+    }
+
+    .map-section .section-title {
+        font-size: 26px; /* Adjusted font size */
+        margin-bottom: 20px; /* Adjusted margin */
+    }
+
+    .map-container {
+        gap: 20px; /* Adjusted gap */
+    }
+
+    .map-label {
+        font-size: 15px; /* Adjusted font size */
+        padding: 8px 15px; /* Adjusted padding */
+    }
+
+    .address-info {
+        padding: 15px; /* Adjusted padding */
+    }
+
+    .address-info h3 {
+        font-size: 18px; /* Adjusted font size */
+        margin-bottom: 10px; /* Adjusted margin */
+    }
+
+    .address-info p {
+        font-size: 13px; /* Adjusted font size */
+    }
+
+    .yandex-map {
+        height: 250px; /* Adjusted height */
+    }
+
+    .footer {
+        padding: 40px 0 20px; /* Adjusted padding */
+    }
+
+    .footer-container {
+        padding: 0 15px; /* Adjusted container padding */
+        gap: 30px; /* Adjusted gap */
+    }
+
+    .footer-logo-text {
+        font-size: 24px; /* Adjusted font size */
+    }
+
+    .footer-phone {
+        font-size: 15px; /* Adjusted font size */
+    }
+
+    .footer-support-button {
+        padding: 8px 12px; /* Adjusted padding */
+        font-size: 13px; /* Adjusted font size */
+    }
+
+    .footer-nav-link {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .footer-bottom {
+        margin-top: 20px; /* Adjusted margin */
+        padding-top: 15px; /* Adjusted padding */
+    }
+
+    .footer-copyright {
+        font-size: 12px; /* Adjusted font size */
+    }
+
+    .application-number-input-container {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 10px; /* Add space between stacked items */
+    }
+
+    .application-number-input-container input[type="text"] {
+        width: 100%; /* Make input take full width */
+    }
+
+    .application-number-input-container button {
+        width: 100%; /* Make button take full width */
+    }
+
+    .mobile-menu {
+        top: calc(10px + 10px + 24px); /* Calculated based on 10px top/bottom padding and estimated 24px content height */
     }
 }
-
 
 .mobile-menu.active {
     display: flex;
@@ -370,7 +733,7 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  top: 8px;
+  top: 5px;
   width: 16px;
   height: 16px;
   background-color: #35abc5;
@@ -599,10 +962,9 @@ a {
 }
 
 .our-works .container {
-  max-width: 100vw;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .our-works .section-title {
@@ -615,11 +977,9 @@ a {
 }
 
 .works-gallery {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 2px;
 }
 
 .work-item {
@@ -821,16 +1181,17 @@ a {
 }
 
 .checkbox-group {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 12px;
+  /* Removed flex-direction, align-items, and gap as input is inside label */
 }
 
 .checkbox-group input[type="checkbox"] {
-  margin-top: 4px;
+  /* Removed margin-top */
   width: 18px;
   height: 18px;
+  margin-top: -4px;
   cursor: pointer;
+  vertical-align: middle; /* Vertically align with text */
+  margin-right: 5px; /* Add some space between checkbox and text */
 }
 
 .checkbox-group label {
@@ -1397,4 +1758,751 @@ a {
 
 .application-details-content strong {
     color: #333;
+}
+
+/* Секция отзывов */
+.reviews-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.reviews-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.reviews-title-container {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.section-title {
+  color: #111;
+  font-family: "Unbounded", sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.reviews-count {
+  color: #35abc5;
+}
+
+.overall-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating-number {
+  font-family: "Unbounded", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #111;
+}
+
+.rating-max {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #777;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 20px;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #FFD700;
+}
+
+.write-review-btn {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.write-review-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+/* Список отзывов */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.review-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+}
+
+.review-header {
+  margin-bottom: 16px;
+}
+
+.review-author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.review-author {
+  font-family: "Unbounded", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+  margin: 0;
+}
+
+.review-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.review-stars .star {
+  font-size: 16px;
+}
+
+.review-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.review-date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #777;
+}
+
+.review-content p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.review-images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.review-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.review-image:hover {
+  transform: scale(1.03);
+}
+
+/* Кнопка "Показать еще" */
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.show-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #35abc5;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid #35abc5;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: rgba(53, 171, 197, 0.05);
+}
+
+/* Модальное окно для написания отзыва */
+.review-modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+}
+
+.review-modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.review-modal-content h3 {
+  color: #111;
+  font-family: "Unbounded", sans-serif;
+  font-size: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  border-color: #35abc5;
+  outline: none;
+}
+
+.rating-select {
+  display: flex;
+  align-items: center;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 5px;
+}
+
+.rating-star {
+  font-size: 24px;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.rating-star.active {
+  color: #FFD700;
+}
+
+.rating-star:hover,
+.rating-star:hover ~ .rating-star {
+  color: #FFD700;
+}
+
+.submit-review-btn {
+  background-color: #35abc5;
+  color: white;
+  font-family: "Unbounded", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.submit-review-btn:hover {
+  background-color: #2c96ae;
+  transform: translateY(-2px);
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 60px 0;
+  }
+
+  .reviews-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .write-review-btn {
+    align-self: flex-start;
+  }
+
+  .review-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .review-date {
+    margin-top: 5px;
+  }
+
+  .review-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .review-modal-content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-section {
+    padding: 40px 0;
+  }
+
+  .reviews-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .review-author-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .review-modal-content h3 {
+    font-size: 20px;
+  }
+}
+
+/* Image Modal Structure */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+}
+
+.image-modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center; /* Center the image */
+}
+
+.close-image-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.close-image-modal:hover {
+  color: #333;
+}
+
+.enlarged-review-image {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below the image */
+  margin: 0 auto; /* Center the image */
+  border-radius: 8px; /* Add rounded corners */
+}
+
+@media (max-width: 768px) {
+  .image-modal-content {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+}
+
+/* Секция с калькулятором */
+.calculator-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.calculator-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.calculator-section .section-title {
+  color: #111;
+  font-family: "Unbounded", sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.calculator-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.calculator-description {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.calculator-description h3 {
+  color: #111;
+  font-family: "Unbounded", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.calculator-description p {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.calculator-image {
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calculator-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#costCalculator {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calculator-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calculator-group label {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.calculator-group select,
+.calculator-group input[type="number"] {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.calculator-group select:focus,
+.calculator-group input[type="number"]:focus {
+  border-color: #35abc5;
+  outline: none;
+}
+
+.checkbox-group {
+  margin-top: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.calculate-button {
+  background-color: #35abc5;
+  color: white;
+  font-family: "Unbounded", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.calculate-button:hover {
+  background-color: #2c96ae;
+  transform: translateY(-2px);
+}
+
+.calculation-result {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.result-header {
+  background-color: #35abc5;
+  padding: 16px 30px;
+}
+
+.result-header h3 {
+  color: white;
+  font-family: "Unbounded", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.result-content {
+  padding: 30px;
+}
+
+.result-content p {
+  color: #555;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.result-details {
+  margin-top: 20px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.result-row.total {
+  font-weight: 700;
+  font-size: 18px;
+  color: #111;
+  border-bottom: none;
+  margin-top: 10px;
+}
+
+.result-footer {
+  background-color: #f5f5f5;
+  padding: 16px 30px;
+  text-align: center;
+}
+
+.result-footer p {
+  color: #555;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.result-footer a {
+  color: #35abc5;
+  text-decoration: underline;
+}
+
+/* Медиа-запросы для секции с калькулятором */
+@media (max-width: 1024px) {
+  .calculator-section {
+    padding: 60px 0;
+  }
+
+  .calculator-section .section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator-container {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-description h3 {
+    font-size: 22px;
+  }
+
+  .calculator-section .section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-section {
+    padding: 40px 0;
+  }
+
+  .calculator-section .section-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .calculator-description,
+  #costCalculator {
+    padding: 20px;
+  }
+
+  .calculator-description h3 {
+    font-size: 20px;
+  }
+
+  .calculator-description p {
+    font-size: 14px;
+  }
+
+  .calculator-group select,
+  .calculator-group input[type="number"] {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  .calculate-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .result-header h3 {
+    font-size: 18px;
+  }
+
+  .result-content {
+    padding: 20px;
+  }
+
+  .result-row {
+    font-size: 14px;
+  }
+
+  .result-row.total {
+    font-size: 16px;
+  }
 }
